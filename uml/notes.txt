@@ -1,0 +1,50 @@
+Etudiant {Utilisateur}
+- suivre des cours
+- télécharger des devoirs
+~ note étudiant = nombre total de points obtenus
+- consulter ses rendus
+- consulter ses notes
+~ Données:
+	~ numéro étudiant
+
+Administrateur
+- créer un cours => affectation auto. d'un chargé de cours
+- supprimer un cours
+- affecter un enseignant au cours
+- supprimer une affectation
+
+Enseignant {Utilisateur}
+- créer un devoir (homework)
+- corriger un devoir
+- attribuer des points à un étudiant
+- attribuer un avis à un étudiant
+- consulter les rendus à corriger
+~ Données:
+	~ Numem
+	~ Harpège
+
+Chargé de cours {Enseignant}
+- définie l'enseignant qui évalue le rendu
+- organise la remise des certificats
+- consulter tous les rendus
+- consulter toutes les notes
+
+Utilisateur
+- gérer leurs données
+- afficher les cours
+- afficher les devoirs d'un cours (SI impliqué dans le cours)
+~ Données:
+	~ nom
+	~ prénom
+	~ adresse postale
+	~ adresse mail
+
+[Devoir] -> [Cours]
+~ nom
+~ description
+~ deadline
+~ nombre de points
+
+[Certificat de participation] -> [Cours]
+~ total de points
+~ appréciation
