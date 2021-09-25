@@ -1,8 +1,11 @@
 package users;
 
+import classes.Cours;
+
 public class Admin extends Utilisateur {
 
-    public Admin() {
+    public Admin(String prenom, String nom, String adresse, String email) {
+        super(prenom, nom, adresse, email);
     }
 
     public void creerCours(Cours c) {
