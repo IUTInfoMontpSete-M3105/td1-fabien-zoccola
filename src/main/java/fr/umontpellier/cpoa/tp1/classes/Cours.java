@@ -47,6 +47,10 @@ public class Cours {
         devoirs.add(d);
     }
 
+    public List<Devoir> getDevoirs() {
+        return devoirs;
+    }
+
     public void inscrire(Etudiant e)
     {
         participations.add(new Participation(e, this));

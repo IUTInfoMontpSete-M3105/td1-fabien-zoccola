@@ -4,11 +4,9 @@ package fr.umontpellier.cpoa.tp1.homework;
  * 
  */
 public enum EtatRendu {
-    CREE,
-    VIDE,
+    EMPTY,
     HAS_DOCUMENTS,
     LOCKED,
     AFFECTE,
-    VALIDE,
-    NON_VALIDE
+    NOTED,
 }

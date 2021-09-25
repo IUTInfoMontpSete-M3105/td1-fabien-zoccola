@@ -1,20 +1,26 @@
 package fr.umontpellier.cpoa.tp1.homework;
 
+import fr.umontpellier.cpoa.tp1.users.Etudiant;
+
 import java.util.*;
 
 public class Devoir {
 
     private final List<Rendu> listRendus;
+    private final String instructions;
+    private final int noteMax;
 
-    public Devoir() {
+    public Devoir(String instructions, int noteMax) {
+        this.instructions = instructions;
+        this.noteMax = noteMax;
         listRendus = new ArrayList<>();
     }
 
-    public void telecharger() {
-        // TODO implement here
+    public String telecharger() {
+        return instructions;
     }
 
-    public void rendreDevoir() {
+    public void rendreDevoir(Etudiant e) {
         // TODO implement here
     }
 
@@ -22,4 +28,7 @@ public class Devoir {
         return listRendus;
     }
 
+    public int getNoteMax() {
+        return noteMax;
+    }
 }
