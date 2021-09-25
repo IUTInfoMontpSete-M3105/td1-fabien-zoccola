@@ -46,6 +46,8 @@ public class Cours {
     }
 
     private int genererCertificats() {
+        for (Participation p : participations.values()) p.commencerCalcul();
+
         int totalNotes = 0;
         for (Devoir d : devoirs)
         {
@@ -55,6 +57,9 @@ public class Cours {
                 participations.get(r.getEtudiant()).ajouterPoints(r.getNote());
             }
         }
+
+        for (Participation p : participations.values()) p.finirCalcul();
+
         return totalNotes;
     }
 

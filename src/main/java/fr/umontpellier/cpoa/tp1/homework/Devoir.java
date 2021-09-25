@@ -20,8 +20,10 @@ public class Devoir {
         return instructions;
     }
 
-    public void rendreDevoir(Etudiant e) {
-        // TODO implement here
+    public Rendu rendreDevoir(Etudiant e) {
+        Rendu r = new Rendu(this, e);
+        listRendus.add(r);
+        return r;
     }
 
     public List<Rendu> getListRendus() {
