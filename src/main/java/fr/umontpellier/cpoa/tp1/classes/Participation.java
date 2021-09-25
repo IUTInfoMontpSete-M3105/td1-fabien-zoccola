@@ -8,6 +8,7 @@ public class Participation {
         this.concerne = concerne;
         this.cours = cours;
         totalPoints = 0;
+        certificat = "";
 
         status = EtatParticipation.ACTIVE;
     }
@@ -19,10 +20,25 @@ public class Participation {
     private final Etudiant concerne;
     private final Cours cours;
 
+    public EtatParticipation getStatus() {
+        return status;
+    }
+
+    public void commencerCalcul()
+    {
+        status = EtatParticipation.LOCKED;
+    }
+
     public void ajouterPoints(int n)
     {
-        if (!status.equals(EtatParticipation.ACTIVE)) return;
+        if (!status.equals(EtatParticipation.LOCKED)) return;
         totalPoints += Math.max(n, 0);
+    }
+
+    public void finirCalcul()
+    {
+        if (!status.equals(EtatParticipation.LOCKED)) return;
+        status = EtatParticipation.ATTENTE_DECISION;
     }
 
     public int getTotalPoints()
@@ -43,7 +59,7 @@ public class Participation {
 
     public void updateStatusUsingAverage(int maxPoints)
     {
-        if (!status.equals(EtatParticipation.ACTIVE)) return;
+        if (!status.equals(EtatParticipation.ATTENTE_DECISION)) return;
 
         status = ((float)totalPoints)/maxPoints >= 0.5
                     ? EtatParticipation.ATTENTE_CERTIF

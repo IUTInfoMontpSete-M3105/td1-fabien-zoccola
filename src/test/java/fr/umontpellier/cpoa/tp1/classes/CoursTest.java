@@ -1,7 +1,5 @@
-package fr.umontpellier.cpoa.tp1;
+package fr.umontpellier.cpoa.tp1.classes;
 
-import fr.umontpellier.cpoa.tp1.classes.Cours;
-import fr.umontpellier.cpoa.tp1.classes.Participation;
 import fr.umontpellier.cpoa.tp1.users.Enseignant;
 import fr.umontpellier.cpoa.tp1.users.Etudiant;
 import fr.umontpellier.cpoa.tp1.util.factories.EnseignantFactory;
@@ -17,11 +15,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CoursTest {
 
     private static Cours c;
-    private static Enseignant chargeDeCours;
 
     @BeforeAll
     static void setup() {
-        chargeDeCours = EnseignantFactory.factory("Najib", 1);
+        Enseignant chargeDeCours = EnseignantFactory.factory("Najib", 1);
         c = new Cours("test", chargeDeCours);
     }
 

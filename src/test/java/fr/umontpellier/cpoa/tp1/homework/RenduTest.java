@@ -1,8 +1,5 @@
-package fr.umontpellier.cpoa.tp1;
+package fr.umontpellier.cpoa.tp1.homework;
 
-import fr.umontpellier.cpoa.tp1.homework.Devoir;
-import fr.umontpellier.cpoa.tp1.homework.EtatRendu;
-import fr.umontpellier.cpoa.tp1.homework.Rendu;
 import fr.umontpellier.cpoa.tp1.users.Enseignant;
 import fr.umontpellier.cpoa.tp1.users.Etudiant;
 import fr.umontpellier.cpoa.tp1.util.factories.EnseignantFactory;
