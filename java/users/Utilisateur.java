@@ -16,4 +16,13 @@ public class Utilisateur {
     private final String adresse;
     private final String email;
 
+    @Override
+    public String toString() {
+        return "Utilisateur{" +
+                "prenom='" + prenom + '\'' +
+                ", nom='" + nom + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

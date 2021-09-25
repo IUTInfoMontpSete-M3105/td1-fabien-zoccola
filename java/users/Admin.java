@@ -15,5 +15,4 @@ public class Admin extends Utilisateur {
     public void supprimerCours(Cours c) {
         // TODO implement here
     }
-
 }

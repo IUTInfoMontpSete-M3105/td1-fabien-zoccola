@@ -9,4 +9,10 @@ public class Etudiant extends Utilisateur {
 
     private final int numEtudiant;
 
+    @Override
+    public String toString() {
+        return "Etudiant{" +
+                "numEtudiant=" + numEtudiant +
+                "} from " + super.toString();
+    }
 }

@@ -32,4 +32,13 @@ public class Enseignant extends Utilisateur {
         // TODO implement here
     }
 
+    @Override
+    public String toString() {
+        return "Enseignant{" +
+                "numem=" + numem +
+                ", harpege='" + harpege + '\'' +
+                ", chargeDe=" + chargeDe +
+                ", enseigne=" + enseigne +
+                "} from " + super.toString();
+    }
 }
