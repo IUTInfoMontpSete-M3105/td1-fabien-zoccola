@@ -16,12 +16,13 @@ public class RenduTest {
 
     private Rendu r;
     private Enseignant ens;
+    private Etudiant etu;
 
     @BeforeEach
     void setup()
     {
         Devoir d = new Devoir("faire le TP1 de CPOA", 20);
-        Etudiant etu = EtudiantFactory.factory("Fabien", 123);
+        etu = EtudiantFactory.factory("Fabien", 123);
         ens = EnseignantFactory.factory("Najib", 1);
 
         r = new Rendu(d, etu);
@@ -104,6 +105,12 @@ public class RenduTest {
         r.assignerEns(ens);
         r.saisirNote(-1);
         assertEquals(0, r.getNote());
+    }
+
+    @Test
+    void getEtudiant()
+    {
+        assertEquals(etu, r.getEtudiant());
     }
 
 }
