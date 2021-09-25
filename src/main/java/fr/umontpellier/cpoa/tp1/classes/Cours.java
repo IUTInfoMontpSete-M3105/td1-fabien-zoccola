@@ -6,7 +6,9 @@ import fr.umontpellier.cpoa.tp1.users.Enseignant;
 import fr.umontpellier.cpoa.tp1.users.Etudiant;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Cours {
 
@@ -15,14 +17,14 @@ public class Cours {
         this.chargeDeCours = chargeDeCours;
         enseignants = new ArrayList<>();
         devoirs = new ArrayList<>();
-        participations = new ArrayList<>();
+        participations = new HashMap<>();
     }
 
     private final String nom;
     private Enseignant chargeDeCours;
     private final List<Enseignant> enseignants;
     private final List<Devoir> devoirs;
-    private final List<Participation> participations;
+    private final Map<Etudiant, Participation> participations;
 
 
     public void changerChargeDeCours(Enseignant e)
@@ -34,12 +36,26 @@ public class Cours {
         enseignants.add(e);
     }
 
-    public void delivrerCertificat(Etudiant e) {
-        // TODO implement here
+    public void delivrerCertificats() {
+        int totalNotes = genererCertificats();
+        for (Participation p : participations.values())
+        {
+            p.updateStatusUsingAverage(totalNotes);
+            if (p.shouldRecieveCertificat()) p.setCertificat("Cours de CPOA réussi");
+        }
     }
 
-    private void genererCertificat(Etudiant e) {
-        // TODO implement here
+    private int genererCertificats() {
+        int totalNotes = 0;
+        for (Devoir d : devoirs)
+        {
+            totalNotes += d.getNoteMax();
+            for (Rendu r : d.getListRendus())
+            {
+                participations.get(r.getEtudiant()).ajouterPoints(r.getNote());
+            }
+        }
+        return totalNotes;
     }
 
     public void ajouterDevoir(Devoir d)
@@ -53,10 +69,10 @@ public class Cours {
 
     public void inscrire(Etudiant e)
     {
-        participations.add(new Participation(e, this));
+        participations.put(e, new Participation(e, this));
     }
 
-    public List<Participation> getParticipations() {
+    public Map<Etudiant, Participation> getParticipations() {
         return participations;
     }
 
