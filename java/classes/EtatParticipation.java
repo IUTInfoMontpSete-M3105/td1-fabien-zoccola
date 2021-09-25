@@ -1,8 +1,5 @@
 package classes;
 
-/**
- * 
- */
 public enum EtatParticipation {
     ACTIVE,
     CALCUL_POINTS,
