@@ -1,7 +1,7 @@
-package homework;
+package fr.umontpellier.cpoa.tp1.homework;
 
-import users.Enseignant;
-import users.Etudiant;
+import fr.umontpellier.cpoa.tp1.users.Enseignant;
+import fr.umontpellier.cpoa.tp1.users.Etudiant;
 
 public class Rendu {
 

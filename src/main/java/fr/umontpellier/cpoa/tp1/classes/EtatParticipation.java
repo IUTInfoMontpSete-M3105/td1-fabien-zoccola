@@ -1,4 +1,4 @@
-package classes;
+package fr.umontpellier.cpoa.tp1.classes;
 
 public enum EtatParticipation {
     ACTIVE,

@@ -1,6 +1,6 @@
-package users;
+package fr.umontpellier.cpoa.tp1.users;
 
-import classes.Cours;
+import fr.umontpellier.cpoa.tp1.classes.Cours;
 
 public class Admin extends Utilisateur {
 

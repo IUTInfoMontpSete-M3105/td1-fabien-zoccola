@@ -1,4 +1,4 @@
-package homework;
+package fr.umontpellier.cpoa.tp1.homework;
 
 import java.util.*;
 

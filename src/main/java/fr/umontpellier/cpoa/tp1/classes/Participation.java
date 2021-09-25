@@ -1,8 +1,6 @@
-package classes;
+package fr.umontpellier.cpoa.tp1.classes;
 
-import users.Etudiant;
-
-import java.util.*;
+import fr.umontpellier.cpoa.tp1.users.Etudiant;
 
 public class Participation {
 

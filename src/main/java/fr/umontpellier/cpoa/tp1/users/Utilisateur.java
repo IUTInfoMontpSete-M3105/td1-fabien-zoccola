@@ -1,6 +1,4 @@
-package users;
-
-import java.util.*;
+package fr.umontpellier.cpoa.tp1.users;
 
 public class Utilisateur {
 

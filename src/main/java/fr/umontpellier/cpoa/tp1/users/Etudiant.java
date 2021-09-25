@@ -1,4 +1,4 @@
-package users;
+package fr.umontpellier.cpoa.tp1.users;
 
 public class Etudiant extends Utilisateur {
 

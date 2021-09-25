@@ -1,8 +1,8 @@
-package users;
+package fr.umontpellier.cpoa.tp1.users;
 
-import classes.Cours;
-import homework.Devoir;
-import homework.Rendu;
+import fr.umontpellier.cpoa.tp1.classes.Cours;
+import fr.umontpellier.cpoa.tp1.homework.Devoir;
+import fr.umontpellier.cpoa.tp1.homework.Rendu;
 
 import java.util.ArrayList;
 import java.util.List;

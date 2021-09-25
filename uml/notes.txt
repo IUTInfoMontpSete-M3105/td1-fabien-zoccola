@@ -1,4 +1,4 @@
-users.Etudiant {users.Utilisateur}
+fr.umontpellier.cpoa.tp1.users.Etudiant {fr.umontpellier.cpoa.tp1.users.Utilisateur}
 - suivre des cours
 - télécharger des devoirs
 ~ note étudiant = nombre total de points obtenus
@@ -13,8 +13,8 @@ Administrateur
 - affecter un enseignant au cours
 - supprimer une affectation
 
-users.Enseignant {users.Utilisateur}
-- créer un devoir (homework)
+fr.umontpellier.cpoa.tp1.users.Enseignant {fr.umontpellier.cpoa.tp1.users.Utilisateur}
+- créer un devoir (fr.umontpellier.cpoa.tp1.homework)
 - corriger un devoir
 - attribuer des points à un étudiant
 - attribuer un avis à un étudiant
@@ -23,13 +23,13 @@ users.Enseignant {users.Utilisateur}
 	~ Numem
 	~ Harpège
 
-Chargé de cours {users.Enseignant}
+Chargé de cours {fr.umontpellier.cpoa.tp1.users.Enseignant}
 - définie l'enseignant qui évalue le rendu
 - organise la remise des certificats
 - consulter tous les rendus
 - consulter toutes les notes
 
-users.Utilisateur
+fr.umontpellier.cpoa.tp1.users.Utilisateur
 - gérer leurs données
 - afficher les cours
 - afficher les devoirs d'un cours (SI impliqué dans le cours)
