@@ -4,11 +4,10 @@ import java.util.*;
 
 public class Devoir {
 
-    public Devoir() {
-    }
+    private final List<Rendu> listRendus;
 
-    public void afficher() {
-        // TODO implement here
+    public Devoir() {
+        listRendus = new ArrayList<>();
     }
 
     public void telecharger() {
@@ -17,6 +16,10 @@ public class Devoir {
 
     public void rendreDevoir() {
         // TODO implement here
+    }
+
+    public List<Rendu> getListRendus() {
+        return listRendus;
     }
 
 }

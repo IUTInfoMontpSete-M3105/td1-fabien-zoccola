@@ -1,20 +1,15 @@
 package homework;
 
 import users.Enseignant;
+import users.Etudiant;
 
 public class Rendu {
 
-    public Rendu() {
-    }
-
-    private int id;
     private Enseignant ens;
+    private Etudiant etudiant;
     private int note;
     private String[] documents;
-
-    public void getId() {
-        // TODO implement here
-    }
+    private EtatRendu etat;
 
     public void assignerEns(Enseignant e) {
         // TODO implement here

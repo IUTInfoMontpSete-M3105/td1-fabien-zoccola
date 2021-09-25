@@ -1,5 +1,6 @@
 package classes;
 
+import homework.Devoir;
 import homework.Rendu;
 import users.Enseignant;
 import users.Etudiant;
@@ -12,11 +13,13 @@ public class Cours {
     public Cours(String nom) {
         this.nom = nom;
         enseignants = new ArrayList<>();
+        devoirs = new ArrayList<>();
     }
 
     private final String nom;
     private Enseignant chargeDeCours;
     private final List<Enseignant> enseignants;
+    private final List<Devoir> devoirs;
 
 
     public void informerEns(Enseignant e) {
