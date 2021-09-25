@@ -8,15 +8,16 @@ import java.util.List;
 
 public class Rendu {
 
-    public Rendu(Etudiant e)
+    public Rendu(Devoir d, Etudiant e)
     {
         etudiant = e;
         etat = EtatRendu.EMPTY;
         documents = new ArrayList<>();
+        devoir = d;
     }
 
-    private Enseignant ens;
     private final Etudiant etudiant;
+    private final Devoir devoir;
     private int note;
     private final List<String> documents;
     private EtatRendu etat;
@@ -30,9 +31,9 @@ public class Rendu {
                 break;
             case HAS_DOCUMENTS:
                 etat = EtatRendu.AFFECTE;
+                e.attribuerRendu(this);
                 break;
         }
-        ens = e;
     }
 
     public void ajouterDocument(String doc)
@@ -43,13 +44,13 @@ public class Rendu {
         }
     }
 
-    public String consulterDocument(int d) {
-        return documents.get(d);
+    public List<String> consulterDocuments() {
+        return documents;
     }
 
     public void saisirNote(int n) {
         if (!etat.equals(EtatRendu.AFFECTE)) return;
-        note = n;
+        note = Math.max(0, Math.min(devoir.getNoteMax(), n));
         etat = EtatRendu.NOTED;
     }
 
@@ -57,4 +58,11 @@ public class Rendu {
         return note;
     }
 
+    public EtatRendu getEtat() {
+        return etat;
+    }
+
+    public Etudiant getEtudiant() {
+        return etudiant;
+    }
 }
