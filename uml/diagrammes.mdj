@@ -61,7 +61,7 @@
 											"top": 167,
 											"width": 91.76171875,
 											"height": 13,
-											"text": "Utilisateur"
+											"text": "users.Utilisateur"
 										},
 										{
 											"_type": "LabelView",
@@ -298,7 +298,7 @@
 											"top": 343,
 											"width": 98.2744140625,
 											"height": 13,
-											"text": "Etudiant"
+											"text": "users.Etudiant"
 										},
 										{
 											"_type": "LabelView",
@@ -689,7 +689,7 @@
 											"top": 597,
 											"width": 174.8525390625,
 											"height": 13,
-											"text": "+informerEns(e: Enseignant)",
+											"text": "+informerEns(e: users.Enseignant)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -723,7 +723,7 @@
 											"top": 627,
 											"width": 174.8525390625,
 											"height": 13,
-											"text": "+delivrerCertificat(e: Etudiant)",
+											"text": "+delivrerCertificat(e: users.Etudiant)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -740,7 +740,7 @@
 											"top": 642,
 											"width": 174.8525390625,
 											"height": 13,
-											"text": "-genererCertificat(e: Etudiant)",
+											"text": "-genererCertificat(e: users.Etudiant)",
 											"horizontalAlignment": 0
 										}
 									],
@@ -846,7 +846,7 @@
 											"top": 335,
 											"width": 176.62353515625,
 											"height": 13,
-											"text": "Enseignant"
+											"text": "users.Enseignant"
 										},
 										{
 											"_type": "LabelView",
@@ -2311,7 +2311,7 @@
 											"top": 733,
 											"width": 167.29248046875,
 											"height": 13,
-											"text": "-ens: Enseignant",
+											"text": "-ens: users.Enseignant",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2396,7 +2396,7 @@
 											"top": 801,
 											"width": 167.29248046875,
 											"height": 13,
-											"text": "+assignerEns(e: Enseignant)",
+											"text": "+assignerEns(e: users.Enseignant)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3325,7 +3325,7 @@
 											"top": 175,
 											"width": 204.08984375,
 											"height": 13,
-											"text": "Admin"
+											"text": "users.Admin"
 										},
 										{
 											"_type": "LabelView",
@@ -4708,7 +4708,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Utilisateur",
+					"name": "users.Utilisateur",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -4758,7 +4758,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Etudiant",
+					"name": "users.Etudiant",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -4958,7 +4958,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Enseignant",
+					"name": "users.Enseignant",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -5416,7 +5416,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Admin",
+					"name": "users.Admin",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -5813,7 +5813,7 @@
 											"top": 269,
 											"width": 63.57177734375,
 											"height": 13,
-											"text": "Utilisateur"
+											"text": "users.Utilisateur"
 										},
 										{
 											"_type": "LabelView",
@@ -6928,7 +6928,7 @@
 											"top": 461,
 											"width": 51.99365234375,
 											"height": 13,
-											"text": "Etudiant"
+											"text": "users.Etudiant"
 										},
 										{
 											"_type": "LabelView",
@@ -8803,7 +8803,7 @@
 											"top": 629,
 											"width": 70.0654296875,
 											"height": 13,
-											"text": "Enseignant"
+											"text": "users.Enseignant"
 										},
 										{
 											"_type": "LabelView",
@@ -13489,7 +13489,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF73eC1dXVtgDU="
 					},
-					"name": "Utilisateur",
+					"name": "users.Utilisateur",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -13604,7 +13604,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF73eC1dXVtgDU="
 					},
-					"name": "Etudiant",
+					"name": "users.Etudiant",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -13769,7 +13769,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF73eC1dXVtgDU="
 					},
-					"name": "Enseignant",
+					"name": "users.Enseignant",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -14279,7 +14279,7 @@
 													"top": 87,
 													"width": 112.6708984375,
 													"height": 13,
-													"text": "Lifeline1: Etudiant"
+													"text": "Lifeline1: users.Etudiant"
 												},
 												{
 													"_type": "LabelView",
@@ -15361,7 +15361,7 @@
 													"top": 87,
 													"width": 130.74267578125,
 													"height": 13,
-													"text": "Lifeline2: Enseignant"
+													"text": "Lifeline2: users.Enseignant"
 												},
 												{
 													"_type": "LabelView",
@@ -16461,7 +16461,7 @@
 													"top": 87,
 													"width": 130.74267578125,
 													"height": 13,
-													"text": "Lifeline1: Enseignant"
+													"text": "Lifeline1: users.Enseignant"
 												},
 												{
 													"_type": "LabelView",
@@ -17921,7 +17921,7 @@
 													"top": 87,
 													"width": 112.6708984375,
 													"height": 13,
-													"text": "Lifeline2: Etudiant"
+													"text": "Lifeline2: users.Etudiant"
 												},
 												{
 													"_type": "LabelView",

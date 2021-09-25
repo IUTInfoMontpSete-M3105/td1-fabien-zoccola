@@ -1,4 +1,4 @@
-Etudiant {Utilisateur}
+users.Etudiant {users.Utilisateur}
 - suivre des cours
 - télécharger des devoirs
 ~ note étudiant = nombre total de points obtenus
@@ -13,7 +13,7 @@ Administrateur
 - affecter un enseignant au cours
 - supprimer une affectation
 
-Enseignant {Utilisateur}
+users.Enseignant {users.Utilisateur}
 - créer un devoir (homework)
 - corriger un devoir
 - attribuer des points à un étudiant
@@ -23,13 +23,13 @@ Enseignant {Utilisateur}
 	~ Numem
 	~ Harpège
 
-Chargé de cours {Enseignant}
+Chargé de cours {users.Enseignant}
 - définie l'enseignant qui évalue le rendu
 - organise la remise des certificats
 - consulter tous les rendus
 - consulter toutes les notes
 
-Utilisateur
+users.Utilisateur
 - gérer leurs données
 - afficher les cours
 - afficher les devoirs d'un cours (SI impliqué dans le cours)

@@ -1,5 +1,7 @@
+package classes;
 
-import java.util.*;
+import users.Enseignant;
+import users.Etudiant;
 
 public class Cours {
 

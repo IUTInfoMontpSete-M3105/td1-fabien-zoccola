@@ -1,5 +1,4 @@
-
-import java.util.*;
+package users;
 
 public class Enseignant extends Utilisateur {
 
