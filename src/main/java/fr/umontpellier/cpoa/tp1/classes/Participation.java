@@ -18,4 +18,21 @@ public class Participation {
     private final Etudiant concerne;
     private final Cours cours;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Participation that = (Participation) o;
+
+        if (!concerne.equals(that.concerne)) return false;
+        return cours.equals(that.cours);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = concerne.hashCode();
+        result = 31 * result + cours.hashCode();
+        return result;
+    }
 }
