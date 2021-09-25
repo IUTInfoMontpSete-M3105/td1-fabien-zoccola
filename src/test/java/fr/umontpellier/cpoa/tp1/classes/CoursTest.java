@@ -57,6 +57,20 @@ public class CoursTest {
         assertTrue(expected.containsAll(actual) && actual.containsAll(expected));
     }
 
+    @Test
+    void changerChargeDeCours()
+    {
+        Enseignant e = EnseignantFactory.factory("Test", 2);
+        c.changerChargeDeCours(e);
+        assertEquals(e, c.getChargeDeCours());
+    }
 
+    @Test
+    void ajouterEnseignant()
+    {
+        Enseignant e = EnseignantFactory.factory("Test", 2);
+        c.ajouterEnseignant(e);
+        assertEquals(new ArrayList<Enseignant>(){{add(e);}}, c.getEnseignants());
+    }
 
 }

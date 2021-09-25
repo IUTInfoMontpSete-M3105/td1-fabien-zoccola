@@ -81,6 +81,14 @@ public class Cours {
         return participations;
     }
 
+    public Enseignant getChargeDeCours() {
+        return chargeDeCours;
+    }
+
+    public List<Enseignant> getEnseignants() {
+        return enseignants;
+    }
+
     @Override
     public String toString() {
         return "Cours{" +
