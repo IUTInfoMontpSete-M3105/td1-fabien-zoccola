@@ -12,12 +12,28 @@ import java.util.Map;
 
 public class Cours {
 
+    private static final List<Cours> COURS = new ArrayList<>();
+
+    public static List<Cours> getListeCours() {
+        return COURS;
+    }
+
+    public static boolean supprimerCours(Cours c)
+    {
+        return COURS.remove(c);
+    }
+
     public Cours(String nom, Enseignant chargeDeCours) {
         this.nom = nom;
         this.chargeDeCours = chargeDeCours;
+
+        chargeDeCours.ajouterChargeDe(this);
+
         enseignants = new ArrayList<>();
         devoirs = new ArrayList<>();
         participations = new HashMap<>();
+
+        COURS.add(this);
     }
 
     private final String nom;
@@ -34,6 +50,7 @@ public class Cours {
 
     public void ajouterEnseignant(Enseignant e) {
         enseignants.add(e);
+        e.assignerCours(this);
     }
 
     public void delivrerCertificats() {

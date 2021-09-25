@@ -26,14 +26,26 @@ public class Enseignant extends Utilisateur {
     private final List<Cours> enseigne;
     private final List<Rendu> rendusAttribues;
 
-
-    public Devoir creerDevoir(Cours c) {
-        // TODO implement here
-        return null;
-    }
-
     public List<Rendu> getRendusAttribues() {
         return rendusAttribues;
+    }
+
+    public List<Cours> getChargeDe() {
+        return chargeDe;
+    }
+
+    public List<Cours> getEnseignements() {
+        return enseigne;
+    }
+
+    public void assignerCours(Cours c)
+    {
+        enseigne.add(c);
+    }
+
+    public void ajouterChargeDe(Cours c)
+    {
+        chargeDe.add(c);
     }
 
     public void noter(Rendu r, int n) {
@@ -50,8 +62,6 @@ public class Enseignant extends Utilisateur {
         return "Enseignant{" +
                 "numem=" + numem +
                 ", harpege='" + harpege + '\'' +
-                ", chargeDe=" + chargeDe +
-                ", enseigne=" + enseigne +
                 "} from " + super.toString();
     }
 }

@@ -1012,9 +1012,18 @@
 									"_parent": {
 										"$ref": "AAAAAAF73j3y9bTli9s="
 									},
-									"name": "c",
+									"name": "nom",
+									"type": "String"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF8HV5pRB2IKjE=",
+									"_parent": {
+										"$ref": "AAAAAAF73j3y9bTli9s="
+									},
+									"name": "cdc",
 									"type": {
-										"$ref": "AAAAAAF73hd/w5+LsPw="
+										"$ref": "AAAAAAF73jAjxKG6/Ew="
 									}
 								}
 							]
@@ -4770,7 +4779,7 @@
 											"font": "Arial;13;1",
 											"left": 613,
 											"top": 175,
-											"width": 204.08984375,
+											"width": 246.74609375,
 											"height": 13,
 											"text": "Admin"
 										},
@@ -4801,7 +4810,7 @@
 									"font": "Arial;13;0",
 									"left": 608,
 									"top": 168,
-									"width": 214.08984375,
+									"width": 256.74609375,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF8HSRstM5I4bk="
@@ -4828,7 +4837,7 @@
 									"font": "Arial;13;0",
 									"left": 608,
 									"top": 193,
-									"width": 214.08984375,
+									"width": 256.74609375,
 									"height": 10
 								},
 								{
@@ -4853,9 +4862,9 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 208,
-											"width": 204.08984375,
+											"width": 246.74609375,
 											"height": 13,
-											"text": "+creerCours(c: Cours)",
+											"text": "+creerCours(nom: String, cdc: Enseignant)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -4870,7 +4879,7 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 223,
-											"width": 204.08984375,
+											"width": 246.74609375,
 											"height": 13,
 											"text": "+supprimerCours(c: Cours)",
 											"horizontalAlignment": 0
@@ -4879,7 +4888,7 @@
 									"font": "Arial;13;0",
 									"left": 608,
 									"top": 203,
-									"width": 214.08984375,
+									"width": 256.74609375,
 									"height": 38
 								},
 								{
@@ -4915,7 +4924,7 @@
 							"containerChangeable": true,
 							"left": 608,
 							"top": 168,
-							"width": 214.08984375,
+							"width": 256.74609375,
 							"height": 73,
 							"nameCompartment": {
 								"$ref": "AAAAAAF8HSRstM5Hw/g="

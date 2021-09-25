@@ -8,11 +8,11 @@ public class Admin extends Utilisateur {
         super(prenom, nom, adresse, email);
     }
 
-    public void creerCours(Cours c) {
-        // TODO implement here
+    public Cours creerCours(String nom, Enseignant chargeDeCours) {
+        return new Cours(nom, chargeDeCours);
     }
 
-    public void supprimerCours(Cours c) {
-        // TODO implement here
+    public boolean supprimerCours(Cours c) {
+        return Cours.supprimerCours(c);
     }
 }

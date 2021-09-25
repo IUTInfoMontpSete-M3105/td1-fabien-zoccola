@@ -8,6 +8,7 @@ import fr.umontpellier.cpoa.tp1.util.factories.EtudiantFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +21,12 @@ public class CoursTest {
     private Cours c;
 
     @BeforeEach
-    void setup() {
+    void setup() throws NoSuchFieldException, IllegalAccessException
+    {
+        Field f = Cours.class.getDeclaredField("COURS");
+        f.setAccessible(true);
+        ((ArrayList<Cours>)f.get(Cours.class)).clear();
+
         Enseignant chargeDeCours = EnseignantFactory.factory("Najib", 1);
         c = new Cours("test", chargeDeCours);
     }
@@ -71,6 +77,19 @@ public class CoursTest {
         Enseignant e = EnseignantFactory.factory("Test", 2);
         c.ajouterEnseignant(e);
         assertEquals(new ArrayList<Enseignant>(){{add(e);}}, c.getEnseignants());
+    }
+
+    @Test
+    void coursInListCours()
+    {
+        assertEquals(new ArrayList<Cours>(){{add(c);}}, Cours.getListeCours());
+    }
+
+    @Test
+    void supprimerCours()
+    {
+        Cours.supprimerCours(c);
+        assertEquals(new ArrayList<Cours>(), Cours.getListeCours());
     }
 
 }
