@@ -14,6 +14,14 @@ public class Utilisateur {
     private final String adresse;
     private final String email;
 
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
     @Override
     public String toString() {
         return "Utilisateur{" +

@@ -88,4 +88,15 @@ public class Participation {
         result = 31 * result + cours.hashCode();
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Participation{" +
+                "totalPoints=" + totalPoints +
+                ", certificat='" + certificat + '\'' +
+                ", status=" + status +
+                ", concerne=" + concerne.getPrenom() + " " + concerne.getNom() +
+                ", cours=" + cours.getNom() +
+                '}';
+    }
 }

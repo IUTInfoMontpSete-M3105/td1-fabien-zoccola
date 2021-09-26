@@ -6,14 +6,14 @@ import java.util.*;
 
 public class Devoir {
 
-    private final List<Rendu> listRendus;
+    private final Map<Etudiant, Rendu> rendus;
     private final String instructions;
     private final int noteMax;
 
     public Devoir(String instructions, int noteMax) {
         this.instructions = instructions;
         this.noteMax = noteMax;
-        listRendus = new ArrayList<>();
+        rendus = new HashMap<>();
     }
 
     public String telecharger() {
@@ -21,13 +21,15 @@ public class Devoir {
     }
 
     public Rendu rendreDevoir(Etudiant e) {
+        if (rendus.containsKey(e)) return null;
+
         Rendu r = new Rendu(this, e);
-        listRendus.add(r);
+        rendus.put(e, r);
         return r;
     }
 
-    public List<Rendu> getListRendus() {
-        return listRendus;
+    public Collection<Rendu> getListRendus() {
+        return rendus.values();
     }
 
     public int getNoteMax() {

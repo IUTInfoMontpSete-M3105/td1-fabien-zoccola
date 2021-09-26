@@ -49,6 +49,8 @@ public class Cours {
     }
 
     public void ajouterEnseignant(Enseignant e) {
+        if (chargeDeCours.equals(e)) return;
+
         enseignants.add(e);
         e.assignerCours(this);
     }
@@ -91,7 +93,9 @@ public class Cours {
 
     public void inscrire(Etudiant e)
     {
-        participations.put(e, new Participation(e, this));
+        Participation p = new Participation(e, this);
+        participations.put(e, p);
+        e.participer(p);
     }
 
     public Map<Etudiant, Participation> getParticipations() {
@@ -104,6 +108,10 @@ public class Cours {
 
     public List<Enseignant> getEnseignants() {
         return enseignants;
+    }
+
+    public String getNom() {
+        return nom;
     }
 
     @Override
